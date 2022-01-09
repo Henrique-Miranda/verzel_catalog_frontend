@@ -1,7 +1,7 @@
 import react from "react";
 
 export default class ListModules extends react.Component{
-    state = { modules: null }
+    state = { modules: [] }
     async componentDidMount(){
         const config = {
             headers: {
@@ -13,11 +13,15 @@ export default class ListModules extends react.Component{
         const response = await fetch(url, config);
         const data = await response.json();
         this.setState({modules: data});
+        console.log(data)
     }
 
     render(){
+        const all_modules = this.state.modules;
         return (
-            <div>Loading...</div>
+            <ul>
+                { all_modules.map(module => <button key={module.id}> {module.name} | Aulas diponiveis: {module.lesson_set.length} </button>)}
+            </ul>
         )
     }
     

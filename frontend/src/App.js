@@ -6,10 +6,9 @@ export default function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Reading API:
-          <Modules />
-        </p>
+        <h2>Módulos:</h2>
+        <p>Selecione o módulo para ver as aulas disponíveis:</p>
+        <Modules />
       </header>
     </div>
   );

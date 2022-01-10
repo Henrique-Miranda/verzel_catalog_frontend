@@ -6,7 +6,6 @@ export default function App(){
     return (
     <div className="App">
         <LoginForm/>
-        <button onClick={()=> document.getElementsByClassName('list_modules')}>Login</button>
         <ListModules />
     </div>
     )

@@ -1,12 +1,10 @@
 import React from "react"
-import ListModules from "./ListModules"
-import LoginForm from "./LoginManager"
+import { Login } from "./pages/Login"
 
 export default function App(){
     return (
     <div className="App">
-        <LoginForm/>
-        <ListModules />
+        <Login />
     </div>
     )
 }

@@ -14,7 +14,7 @@ export const Login = ()=>{
                 username,
                 password
             }
-        const data = await callApi('api-token-auth/', 'post', body)
+        const data = await callApi('api-token-auth/', 'POST', body)
         console.log(username)
         setToken(data)
         }catch(error){

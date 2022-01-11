@@ -8,9 +8,8 @@ const instance = axios.create({
 export const callApi = (point, method, body) =>{
     console.log(`Carregando API... ${URL}${point}${method}${body}`)
     return instance.request({
-        headers: {"Access-Control-Allow-Origin": "*", "Access-Control-Allow-Methods": "GET, POST, OPTIONS, PUT, PATCH, DELETE"},
         url: point,
-        method: method,
+        method: 'POST',
         data: body ? body : ''
     })
 }
